@@ -76,9 +76,6 @@ class ChemistryDetailTableViewController: UITableViewController {
     var ShowAnsLabel = ""
     var yourAnsLabel = ""
 
-    var DownPoints = 0.8//倒扣
-    var point = 2.0//配分
-    var grade = 0.0//總分
     var gradeLabel = ""
     
     
@@ -116,8 +113,8 @@ class ChemistryDetailTableViewController: UITableViewController {
         let userDefault = UserDefaults.standard
         let name = userDefault.string(forKey: "nextQues")
         
-        notenumber = notenumber + 1 //按一下題號加一
-        nowQues = notenumber //防止下一題超過範圍
+        notenumber = notenumber + 1
+        nowQues = notenumber
         nextQues = notenumber + 1
         
         if nextQues >= array.count {
